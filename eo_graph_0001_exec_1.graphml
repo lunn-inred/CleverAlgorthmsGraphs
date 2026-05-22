@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d4" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d3" for="graph" attr.name="best_distance" attr.type="double"/>
+<key id="d2" for="graph" attr.name="param_tau" attr.type="double"/>
+<key id="d1" for="graph" attr.name="param_iterations" attr.type="long"/>
+<key id="d0" for="graph" attr.name="algoritmo" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">EO</data>
+<data key="d1">50</data>
+<data key="d2">1.4</data>
+<data key="d3">15.898639606099524</data>
+<node id="Init"/>
+<node id="NextIter"/>
+<node id="CityLoop"/>
+<node id="Ranking"/>
+<node id="RouletteWheel"/>
+<node id="Exchange"/>
+<node id="UpdateBest"/>
+<node id="NoUpdate"/>
+<node id="End"/>
+<edge source="Init" target="NextIter">
+  <data key="d4">1.0</data>
+</edge>
+<edge source="NextIter" target="CityLoop">
+  <data key="d4">1.0</data>
+</edge>
+<edge source="NextIter" target="End">
+  <data key="d4">1.0</data>
+</edge>
+<edge source="CityLoop" target="Ranking">
+  <data key="d4">1.0</data>
+</edge>
+<edge source="CityLoop" target="UpdateBest">
+  <data key="d4">0.88</data>
+</edge>
+<edge source="CityLoop" target="NoUpdate">
+  <data key="d4">0.12</data>
+</edge>
+<edge source="Ranking" target="RouletteWheel">
+  <data key="d4">1.0</data>
+</edge>
+<edge source="RouletteWheel" target="Exchange">
+  <data key="d4">1.0</data>
+</edge>
+<edge source="UpdateBest" target="NextIter">
+  <data key="d4">0.88</data>
+</edge>
+<edge source="NoUpdate" target="NextIter">
+  <data key="d4">0.12</data>
+</edge>
+</graph></graphml>

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d5" for="edge" attr.name="weight" attr.type="long"/>
+<key id="d4" for="graph" attr.name="best_distance" attr.type="double"/>
+<key id="d3" for="graph" attr.name="param_tabu_tenure" attr.type="long"/>
+<key id="d2" for="graph" attr.name="param_iterations" attr.type="long"/>
+<key id="d1" for="graph" attr.name="execucao" attr.type="long"/>
+<key id="d0" for="graph" attr.name="algoritmo" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">TABU</data>
+<data key="d1">1</data>
+<data key="d2">100</data>
+<data key="d3">20</data>
+<data key="d4">14.84978531469985</data>
+<node id="Init"/>
+<node id="NextIter"/>
+<node id="TabuUpdate"/>
+<node id="UpdateBest"/>
+<node id="NoUpdate"/>
+<node id="CheckDiversify"/>
+<node id="Diversify"/>
+<node id="NoDiversify"/>
+<edge source="Init" target="NextIter">
+  <data key="d5">1</data>
+</edge>
+<edge source="NextIter" target="TabuUpdate">
+  <data key="d6">1.0</data>
+</edge>
+<edge source="TabuUpdate" target="UpdateBest">
+  <data key="d6">0.51</data>
+</edge>
+<edge source="TabuUpdate" target="NoUpdate">
+  <data key="d6">0.49</data>
+</edge>
+<edge source="UpdateBest" target="NextIter">
+  <data key="d6">0.51</data>
+</edge>
+<edge source="NoUpdate" target="CheckDiversify">
+  <data key="d6">0.49</data>
+</edge>
+<edge source="CheckDiversify" target="Diversify">
+  <data key="d6">0.0</data>
+</edge>
+<edge source="CheckDiversify" target="NoDiversify">
+  <data key="d6">0.49</data>
+</edge>
+<edge source="Diversify" target="NextIter">
+  <data key="d6">0.0</data>
+</edge>
+<edge source="NoDiversify" target="NextIter">
+  <data key="d6">0.49</data>
+</edge>
+</graph></graphml>

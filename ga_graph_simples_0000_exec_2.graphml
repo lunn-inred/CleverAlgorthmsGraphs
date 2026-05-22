@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d8" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d7" for="edge" attr.name="weight" attr.type="long"/>
+<key id="d6" for="graph" attr.name="best_distance" attr.type="double"/>
+<key id="d5" for="graph" attr.name="param_mutation_rate" attr.type="double"/>
+<key id="d4" for="graph" attr.name="param_elite" attr.type="long"/>
+<key id="d3" for="graph" attr.name="param_generations" attr.type="long"/>
+<key id="d2" for="graph" attr.name="param_population_size" attr.type="long"/>
+<key id="d1" for="graph" attr.name="execucao" attr.type="long"/>
+<key id="d0" for="graph" attr.name="algoritmo" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">GA</data>
+<data key="d1">2</data>
+<data key="d2">10</data>
+<data key="d3">20</data>
+<data key="d4">0</data>
+<data key="d5">0.01</data>
+<data key="d6">8.142972841482363</data>
+<node id="InitPop"/>
+<node id="NextGen"/>
+<node id="Breeding"/>
+<node id="Mutation"/>
+<node id="EvalOffspring"/>
+<node id="UpdateElite"/>
+<node id="NoUpdate"/>
+<edge source="InitPop" target="NextGen">
+  <data key="d7">1</data>
+</edge>
+<edge source="NextGen" target="Breeding">
+  <data key="d8">1.05</data>
+</edge>
+<edge source="Breeding" target="Mutation">
+  <data key="d8">1.05</data>
+</edge>
+<edge source="Mutation" target="EvalOffspring">
+  <data key="d8">1.05</data>
+</edge>
+<edge source="EvalOffspring" target="UpdateElite">
+  <data key="d8">0.1</data>
+</edge>
+<edge source="EvalOffspring" target="NoUpdate">
+  <data key="d8">0.95</data>
+</edge>
+<edge source="UpdateElite" target="NextGen">
+  <data key="d8">0.1</data>
+</edge>
+<edge source="NoUpdate" target="NextGen">
+  <data key="d8">0.95</data>
+</edge>
+</graph></graphml>
